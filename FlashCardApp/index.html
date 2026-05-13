@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elite Flashcard App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="background">
+  <div class="circle x1"></div>
+  <div class="circle x2"></div>
+  <div class="circle x3"></div>
+  <div class="circle x4"></div>
+</div>
+
+<h1>📚 Elite Flashcard Quiz</h1>
+
+<div class="top-bar">
+  <div>🧠 Score: <span id="score">0</span></div>
+  <div>⭐ XP: <span id="xp">0</span></div>
+  <div>🏆 Level: <span id="level">1</span></div>
+  <div>⏱ <span id="timer">15</span>s</div>
+</div>
+
+<div class="controls">
+  <select id="category">
+    <option>Programming</option>
+    <option>Science</option>
+    <option>Math</option>
+  </select>
+
+  <button onclick="toggleTheme()">🌙 Theme</button>
+</div>
+
+<div class="progress-container">
+  <div class="progress-bar" id="progressBar"></div>
+</div>
+
+<div class="card" onclick="flipCard()">
+
+  <div class="card-inner">
+
+    <div class="card-front" id="question">
+      What is Java?
+    </div>
+
+    <div class="card-back" id="answer">
+      Programming Language
+    </div>
+
+  </div>
+
+</div>
+
+<div class="buttons">
+  <button onclick="markCorrect()">✅ Correct</button>
+  <button onclick="markWrong()">❌ Wrong</button>
+  <button onclick="nextCard()">➡️ Next</button>
+</div>
+
+<div class="motivation" id="motivation">
+  💡 Learning never stops!
+</div>
+
+<audio id="correctSound" src="https://www.soundjay.com/buttons/sounds/button-3.mp3"></audio>
+<audio id="wrongSound" src="https://www.soundjay.com/buttons/sounds/button-10.mp3"></audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>

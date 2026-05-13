@@ -1,0 +1,259 @@
+body{
+  margin:0;
+  overflow:hidden;
+  text-align:center;
+  font-family:'Segoe UI',sans-serif;
+  color:white;
+
+  background:
+  linear-gradient(
+  135deg,
+  #0f2027,
+  #203a43,
+  #2c5364);
+
+  height:100vh;
+}
+
+/* Animated stars */
+body::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:200%;
+  height:200%;
+
+  background-image:
+  radial-gradient(white 1px, transparent 1px);
+
+  background-size:40px 40px;
+
+  opacity:0.25;
+
+  animation:stars 80s linear infinite;
+}
+
+@keyframes stars{
+
+  from{
+    transform:translateY(0);
+  }
+
+  to{
+    transform:translateY(-600px);
+  }
+
+}
+
+/* Aurora waves */
+body::after{
+
+  content:"";
+
+  position:absolute;
+
+  width:250%;
+  height:250%;
+
+  background:
+  linear-gradient(
+  120deg,
+  rgba(0,255,255,0.08),
+  rgba(255,0,255,0.08),
+  rgba(255,255,255,0.03));
+
+  transform:rotate(25deg);
+
+  animation:aurora 14s infinite linear;
+}
+
+@keyframes aurora{
+
+  from{
+    transform:
+    translateX(-25%)
+    rotate(25deg);
+  }
+
+  to{
+    transform:
+    translateX(25%)
+    rotate(25deg);
+  }
+
+}
+
+h1{
+
+  margin-top:30px;
+
+  font-size:45px;
+
+  letter-spacing:2px;
+
+  text-shadow:0 0 25px rgba(255,255,255,0.6);
+
+  position:relative;
+  z-index:2;
+}
+
+.quote-container{
+  position:relative;
+  z-index:2;
+}
+
+.quote-box{
+
+  width:65%;
+
+  margin:auto;
+
+  padding:35px;
+
+  border-radius:30px;
+
+  background:
+  rgba(255,255,255,0.08);
+
+  border:
+  1px solid rgba(255,255,255,0.15);
+
+  backdrop-filter:blur(20px);
+
+  box-shadow:
+  0 8px 32px rgba(0,0,0,0.3);
+
+  transition:0.4s;
+}
+
+.quote-box:hover{
+
+  transform:
+  translateY(-8px)
+  scale(1.02);
+}
+
+#quote{
+
+  font-size:30px;
+
+  line-height:1.7;
+
+  animation:fade 1s;
+
+  font-weight:500;
+}
+
+#author{
+
+  margin-top:20px;
+
+  font-size:20px;
+
+  opacity:0.8;
+
+  letter-spacing:1px;
+}
+
+@keyframes fade{
+
+  from{
+    opacity:0;
+    transform:translateY(25px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+.buttons{
+  margin-top:30px;
+}
+
+button{
+
+  padding:14px 22px;
+
+  margin:10px;
+
+  border:none;
+
+  border-radius:14px;
+
+  background:
+  rgba(255,255,255,0.1);
+
+  color:white;
+
+  backdrop-filter:blur(10px);
+
+  cursor:pointer;
+
+  font-size:15px;
+
+  transition:0.3s;
+}
+
+button:hover{
+
+  transform:
+  scale(1.12);
+
+  background:
+  rgba(255,255,255,0.2);
+}
+
+.extra-info{
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:50px;
+
+  margin-top:30px;
+
+  font-size:20px;
+
+  opacity:0.9;
+}
+
+.motivation{
+
+  margin-top:25px;
+
+  font-size:22px;
+
+  animation:pulse 2s infinite alternate;
+
+  position:relative;
+
+  z-index:2;
+}
+
+@keyframes pulse{
+
+  from{
+    opacity:0.5;
+  }
+
+  to{
+    opacity:1;
+  }
+
+}
+
+/* Dark mode */
+.dark{
+
+  background:
+  linear-gradient(
+  to right,
+  #000428,
+  #004e92);
+}
